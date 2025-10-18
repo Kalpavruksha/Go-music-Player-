@@ -1,5 +1,3 @@
-
-
 # Dependencies
 *.exe
 *.exe~
@@ -36,8 +34,8 @@ Thumbs.db
 # Go specific
 *.out
 *.test
-go.mod
-go.sum
+# go.mod  # Commented out so go.mod can be included
+# go.sum  # Commented out so go.sum can be included
 
 # Screenshots placeholders
 screenshots/*.txt

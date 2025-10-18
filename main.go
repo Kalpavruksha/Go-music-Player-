@@ -36,8 +36,13 @@ func main() {
 	// API endpoint to stream a song
 	http.HandleFunc("/song/", streamSongHandler)
 
-	fmt.Println("Server starting on :8081")
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	// Render automatically assigns a port via the PORT environment variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8081"
+	}
+	fmt.Println("Server starting on :" + port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func listSongsHandler(w http.ResponseWriter, r *http.Request) {
