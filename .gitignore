@@ -9,6 +9,7 @@
 bin/
 dist/
 build/
+app
 
 # Configuration
 *.env
